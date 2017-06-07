@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Search</title>
+    <script language="javascript">
+        function splitIndex(searchIndex) {
+            var searchPage = ['0.htm', '1.htm', '2.htm', '3.htm', '4.htm'];
+
+            var tmpSplit = searchIndex.split(':');
+            var countSplit = tmpSplit.length;
+            if (countSplit > 0) {
+                for (var i = 0; i < countSplit; i++) {
+                    alert(searchPage[tmpSplit[i]]);
+                }
+            }
+        }
+
+        function searchPrivilege(searchKeyword) {
+            var keyword = ['true', 'kfc', 'mac'];
+            var filename = ['1:2:3', '3:4', '0:2:4'];
+
+            var searchIndex = keyword.indexOf(searchKeyword);
+            if (searchIndex != -1) {
+                splitIndex(filename[searchIndex]);
+            } else {
+                alert('ไม่พบข้อมูล');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <script language="javascript">
+            // searchPrivilege('kfc');
+            searchPrivilege('true');
+        </script>
+    </center>
+</body>
+
+</html>
